@@ -1,0 +1,13 @@
+// Import variables at the top
+@import 'variables';  // Correct import statement
+
+// Use variables
+.h1 {
+  font-size: $h1-font-size;
+  font-weight: $h1-font-weight;
+}
+
+.lead {
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+}
