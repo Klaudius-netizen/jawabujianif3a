@@ -71,7 +71,7 @@
         padding: 12px 30px; /* Increased padding for larger click area */
         font-size: 18px; /* Larger font size for better visibility */
         color: #fff; /* White text color */
-        background: linear-gradient(145deg, #6e7dff, #4e56d1); /* Gradient background */
+        background: linear-gradient(145deg, #6e7dff, #3b8bba); /* Gradient background */
         border: 1px solid transparent; /* Border is transparent to allow for border-radius effects */
         border-radius: 50px; /* Rounded edges for a pill shape */
         text-decoration: none; /* Remove the underline */
