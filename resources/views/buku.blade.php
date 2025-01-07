@@ -66,6 +66,38 @@
         .navbar, .footer {
             font-family: 'Roboto', sans-serif;
         }
+        .btn-create {
+        display: inline-block;
+        padding: 12px 30px; /* Increased padding for larger click area */
+        font-size: 18px; /* Larger font size for better visibility */
+        color: #fff; /* White text color */
+        background: linear-gradient(145deg, #6e7dff, #4e56d1); /* Gradient background */
+        border: 1px solid transparent; /* Border is transparent to allow for border-radius effects */
+        border-radius: 50px; /* Rounded edges for a pill shape */
+        text-decoration: none; /* Remove the underline */
+        text-align: center; /* Align text */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+        transition: all 0.3s ease-in-out; /* Smooth transition for all states */
+    }
+
+    /* Hover effect */
+    .btn-create:hover {
+        background: linear-gradient(145deg, #4e56d1, #6e7dff); /* Inverse gradient on hover */
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+        transform: translateY(-3px); /* Lift effect */
+    }
+
+    /* Active state effect */
+    .btn-create:active {
+        transform: translateY(1px); /* Slightly push button down on click */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Reset shadow on click */
+    }
+
+    /* Focus effect for accessibility */
+    .btn-create:focus {
+        outline: none; /* Remove default focus outline */
+        border: 2px solid #4e56d1; /* Add a border for visual feedback */
+    }
     </style>
 </head>
 <body>
@@ -77,9 +109,10 @@
         <a href="{{ route('signup') }}">Signup</a>
     </div>
     <h2>Daftar Buku</h2>
-    <div class="container">
-        <a href="{{ route('buku.create') }}" class="btn btn-primary">Tambahkan Buku</a>
-    </div>
+<div class="container">
+    <!-- Button with enhanced styles -->
+    <a href="{{ route('buku.create') }}" class="btn btn-create">Tambahkan Buku</a>
+</div>
 
     <div class="content">
         @foreach ($buku as $book)
