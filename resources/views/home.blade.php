@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Management App</title>
+    <title>Perpustakaan MDP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
@@ -69,8 +69,8 @@
     <div class="navbar">
         <a href="{{ route('home') }}">Home</a>
         <a href="{{ route('buku') }}">Buku</a>
-        <a href="{{ route('pinjam') }}">Pinjam</a>
-        <a href="{{ route('signup') }}">Signup</a>
+        <a href="{{ route('anggota') }}">Daftar Anggota</a>
+        <a href="{{ route('pinjam') }}">Peminjaman Buku</a>
     </div>
 
     <!-- Main Content -->

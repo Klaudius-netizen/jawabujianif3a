@@ -3,10 +3,10 @@
 
 @section('content')
     <div class="container">
-        <h2>Sign Up</h2>
+        <h2>Pinjam Buku</h2>
 
         <!-- Form to register new member -->
-        <form action="{{ route('register.anggota') }}" method="POST">
+        <form action="{{ route('pinjam.store') }}" method="POST">
             @csrf <!-- CSRF Token for security -->
 
             <!-- ID Anggota -->
@@ -17,24 +17,12 @@
 
             <!-- Nama Anggota -->
             <div class="form-group">
-                <label for="Nama_Anggota">Nama Anggota</label>
+                <label for="Nama_Anggota">ID Buku</label>
                 <input type="text" class="form-control" id="Nama_Anggota" name="Nama_Anggota" required>
             </div>
 
-            <!-- Alamat -->
-            <div class="form-group">
-                <label for="Alamat">Alamat</label>
-                <input type="text" class="form-control" id="Alamat" name="Alamat" required>
-            </div>
-
-            <!-- Jurusan -->
-            <div class="form-group">
-                <label for="Jurusan">Jurusan</label>
-                <input type="text" class="form-control" id="Jurusan" name="Jurusan" required>
-            </div>
-
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary">Sign Up</button>
+            <button type="submit" class="btn btn-primary">Ajukan Pinjaman</button>
         </form>
     </div>
 @endsection

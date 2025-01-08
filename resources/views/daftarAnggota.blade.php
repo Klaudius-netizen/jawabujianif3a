@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Library Management App</title>
-
-    <!-- External Styles -->
+    <title>Perpustakaan MDP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <!-- Additional Styles (optional) -->
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -41,7 +37,6 @@
         .content {
             display: flex;
             justify-content: space-around;
-            flex-wrap: wrap;
         }
         .card {
             background-color: white;
@@ -101,35 +96,36 @@
     </style>
 </head>
 <body>
+
     <!-- Navbar -->
     <div class="navbar">
         <a href="{{ route('home') }}">Home</a>
         <a href="{{ route('buku') }}">Buku</a>
         <a href="{{ route('anggota') }}">Daftar Anggota</a>
-        <a href="{{ route('pinjam') }}">Peminjaman</a>
+        <a href="{{ route('pinjam') }}">Peminjaman Buku</a>
     </div>
-    <h2>Daftar Buku</h2>
+
+    <h2>Daftar Anggota</h2>
 <div class="container">
     <!-- Button with enhanced styles -->
-    <a href="{{ route('buku.create') }}" class="btn btn-create">Tambahkan Buku</a>
+    <a href="{{ route('anggota.create') }}" class="btn btn-create">Tambahkan Anggota</a>
 </div>
 
     <div class="content">
-        @foreach ($buku as $book)
+        @foreach ($anggota as $A)
             <div class="card">
-                <img src="https://via.placeholder.com/150" alt="Book Cover">
-               <div class="card-title">{{ $book->IDBuku }} - {{ $book->Nama_Buku }}</div>
-                <div class="card-details">Pengarang: {{ $book->Pengarang }}</div>
-                <div class="card-details">Penerbit: {{ $book->Penerbit }}</div>
-                <div class="card-details">Jumlah Buku: {{ $book->Jumlah_Buku }}</div>
+                <img src="https://via.placeholder.com/150" alt="Foto Anggota">
+               <div class="card-title">{{ $A->IDAnggota }} - {{ $A->Nama_Anggota }}</div>
+                <div class="card-details">Alamat: {{ $A->Alamat }}</div>
+                <div class="card-details">Jurusan: {{ $A->Jurusan }}</div>
             </div>
         @endforeach
     </div>
- <!-- Footer -->
+
+    <!-- Footer -->
     <div class="footer">
         <p>&copy; 2025 Library Management System</p>
     </div>
 
 </body>
 </html>
-
